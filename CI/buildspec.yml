@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - dockerd
+      - docker run --name lightning-talk-db -e MYSQL_RANDOM_ROOT_PASSWORD=1 -e MYSQL_DATABASE=lightning_talk -e MYSQL_USER=lightning_talk -e MYSQL_PASSWORD=lightning_talk -e TZ=Pacific/Auckland -p 13306:3306 -d mysql:5.7
       - docker-compose -f CI/docker-compose.yml up -d
   build:
     commands:
