@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - service docker start
+      - dockerd
       - docker-compose -f CI/docker-compose.yml up -d
   build:
     commands:
