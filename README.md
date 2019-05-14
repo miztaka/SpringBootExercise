@@ -1,2 +1,4 @@
-# LightningTalkApi
-Spring Boot REST API exercise
+# Spring Boot REST API exercise
+
+[apispec.yml]
+
